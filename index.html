@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta Tags -->
+  <title>V Premnath | Backend Engineer & Cloud Native Systems</title>
+  <meta name="title" content="V Premnath | Backend Engineer & Cloud Native Systems">
+  <meta name="description"
+    content="Backend Engineer with 1+ years of production experience building scalable microservices, REST APIs, and cloud-native systems using Python, FastAPI, Django, Java Spring Boot, and AWS.">
+  <meta name="keywords"
+    content="V Premnath, Backend Engineer, Python Developer, FastAPI, Django, Spring Boot, Java Developer, AWS, Microservices, System Design, Distributed Systems, RGUKT">
+  <meta name="author" content="V Premnath">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vpremnath.dev/">
+  <meta property="og:title" content="V Premnath | Backend Engineer & Cloud Native Systems">
+  <meta property="og:description"
+    content="Backend Engineer with 1+ years of production experience building scalable microservices, REST APIs, and cloud-native systems. Released 3+ production applications.">
+  <meta property="og:image" content="assets/premnath.jpg">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="V Premnath | Backend Engineer & Cloud Native Systems">
+  <meta name="twitter:description"
+    content="Backend Engineer specializing in Python, FastAPI, Java Spring Boot, and AWS. Explore production projects and API performance benchmarks.">
+  <meta name="twitter:image" content="assets/premnath.jpg">
+
+  <!-- Favicon / Browser Tab Logo -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/favicon.svg">
+  <link rel="shortcut icon" href="assets/favicon.svg">
+  <meta name="theme-color" content="#05070e">
+
+  <!-- Google Fonts Preconnect & Load -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Three.js (r128) for 3D Background -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- JSON-LD Structured Data (Person & ProfilePage) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://vpremnath.dev/#person",
+        "name": "V Premnath",
+        "image": "https://vpremnath.dev/assets/premnath.jpg",
+        "jobTitle": "Backend Engineer",
+        "description": "Backend Engineer specializing in Python, FastAPI, Django, Java Spring Boot, and Cloud Native Systems.",
+        "email": "vpremnath1509@gmail.com",
+        "telephone": "+917032809639",
+        "sameAs": [
+          "https://github.com/V-Premnath",
+          "https://linkedin.com/in/premnath-vasudevaiah"
+        ],
+        "knowsAbout": [
+          "Python",
+          "FastAPI",
+          "Django REST Framework",
+          "Java",
+          "Spring Boot",
+          "Microservices",
+          "AWS Cloud",
+          "Docker",
+          "Multi-Tenant RBAC",
+          "Playwright E2E",
+          "Database Query Optimization"
+        ],
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Rajiv Gandhi University of Knowledge Technologies (RGUKT), RK Valley"
+        }
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://vpremnath.dev/#webpage",
+        "url": "https://vpremnath.dev/",
+        "name": "V Premnath - Professional Backend Engineer Portfolio",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://vpremnath.dev/#website",
+          "url": "https://vpremnath.dev/",
+          "name": "V Premnath Portfolio"
+        },
+        "about": {
+          "@id": "https://vpremnath.dev/#person"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- Three.js Interactive 3D Canvas Background -->
+  <div id="three-canvas-container" aria-hidden="true"></div>
+  <div class="ambient-glow-top" aria-hidden="true"></div>
+  <div class="ambient-glow-bottom" aria-hidden="true"></div>
+
+  <!-- ========================================================================
+       NAVIGATION BAR
+       ======================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand" aria-label="V Premnath Home">
+        <img src="assets/favicon.svg" alt="VP Logo" class="brand-logo-img" width="34" height="34">
+        <span>V. Premnath</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu-list">
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <!-- <li><a href="#playground" class="nav-link">API Sandbox</a></li> -->
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-sm btn-primary">
+          <span>Let's Talk ↗</span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle-btn" aria-label="Toggle navigation menu">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ========================================================================
+         HERO SECTION WITH 3D PROFILE CARD & METRIC CHIPS
+         ======================================================================== -->
+    <section id="hero" class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Hero Left Content -->
+          <div class="hero-content">
+            <div class="status-pill" data-reveal>
+              <span class="pulse-dot"></span>
+              <span>Open to Backend & Full-Stack Engineering Roles</span>
+            </div>
+
+            <h1 class="hero-title" data-reveal>
+              Engineering <span class="text-gradient">resilient microservices</span> & scalable cloud systems.
+            </h1>
+
+            <p class="hero-subtitle" data-reveal>
+              Backend Engineer with <strong>1+ years of production experience</strong> building high-throughput REST
+              APIs and distributed architectures using <strong>Python (FastAPI, Django)</strong>, <strong>Java (Spring
+                Boot)</strong>, and <strong>AWS Cloud</strong>. Proven track record of boosting SQL query performance by
+              <strong>50%</strong> and shipping live client applications.
+            </p>
+
+            <div class="hero-actions" data-reveal>
+              <a href="#projects" class="btn btn-primary">
+                <span>Explore Shipped Work ↓</span>
+              </a>
+              <!-- <a href="#playground" class="btn btn-outline-cyan">
+                <span>⚡ Test Live API Sandbox</span>
+              </a> -->
+              <button class="btn btn-secondary copy-email-trigger" aria-label="Copy email address to clipboard">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                <span>vpremnath1509@gmail.com</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Hero Right: Photo with 3D Conic Glowing Frame & Floating Badges -->
+          <div class="hero-profile-container" data-reveal>
+            <div class="profile-card-wrapper">
+
+              <!-- Floating Top Right Badge -->
+              <div class="floating-chip chip-top-right">
+                <span class="chip-icon">⚡</span>
+                <div>
+                  <div class="chip-val">+50% Speedup</div>
+                  <div class="chip-desc">SQL Query Optimization</div>
+                </div>
+              </div>
+
+              <!-- Main Avatar Frame -->
+              <div class="profile-avatar-frame">
+                <div class="profile-image-inner">
+                  <img src="assets/premnath.jpg" alt="V Premnath - Backend Engineer" class="profile-photo"
+                    loading="eager" width="400" height="500">
+                  <div class="profile-overlay-badge">
+                    <div>
+                      <div class="profile-role-name">V Premnath</div>
+                      <div class="profile-role-title">Backend & Cloud Systems Engineer</div>
+                    </div>
+                    <span class="badge badge-emerald">● Live</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Floating Bottom Left Badge -->
+              <div class="floating-chip chip-bottom-left">
+                <span class="chip-icon">🚀</span>
+                <div>
+                  <div class="chip-val">3+ Live Apps</div>
+                  <div class="chip-desc">Google Play & Web</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Metric Highlight Ribbon -->
+        <div class="hero-metrics-bar" data-reveal>
+          <div class="metric-card">
+            <div class="metric-val">3+ Live Apps</div>
+            <div class="metric-desc">GolfNex (Play Store), abiozen.com, aroscompliance.com</div>
+          </div>
+          <div class="metric-card accent-cyan">
+            <div class="metric-val">10+ APIs Integrated</div>
+            <div class="metric-desc">Payments, OAuth2, SMS, Analytics & Webhooks</div>
+          </div>
+          <div class="metric-card accent-violet">
+            <div class="metric-val">6+ Client Deployments</div>
+            <div class="metric-desc">At Adifice Technologies across e-commerce & enterprise</div>
+          </div>
+          <div class="metric-card accent-amber">
+            <div class="metric-val">8.84 / 10 CGPA</div>
+            <div class="metric-desc">B.Tech Computer Science Engineering @ RGUKT</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ========================================================================
+         PROJECTS & PRODUCTION CLIENTS SHOWCASE
+         ======================================================================== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-eyebrow">Production Portfolio</span>
+          <h2 class="section-title">Applications & Scalable Systems</h2>
+          <p class="section-desc">
+            Shipped backend microservices, enterprise SaaS platforms, and client applications running in production
+            environments.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-container" data-reveal>
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="client">Production Clients (6+)</button>
+          <button class="filter-btn" data-filter="java">Spring Boot & Java</button>
+          <button class="filter-btn" data-filter="python">Python & FastAPI</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: PharmaEase -->
+          <article class="project-card glass-card" data-category="java" data-tags="java spring sql" data-reveal>
+            <div class="project-top">
+              <span class="project-category-badge">ENTERPRISE SYSTEM ARCHITECTURE</span>
+              <h3 class="project-title">
+                <span>PharmaEase — Multi-Tenant Pharmacy System</span>
+              </h3>
+              <p class="project-desc">
+                Architected a high-concurrency multi-tenant pharmacy backend with 5+ user roles (Admin, Pharmacist,
+                Doctor, Cashier, Customer) and granular RBAC. Implemented complex transactional order routing,
+                normalized schemas, and OAuth2 security.
+              </p>
+
+              <ul class="project-highlights-list">
+                <li>Engineered global cart management with real-time inventory locking and intelligent order splitting.
+                </li>
+                <li>Integrated Google OAuth2 authentication alongside JWT refresh-token rotation.</li>
+                <li>Applied SOLID object-oriented design patterns and 3NF normalization for high-scale queries.</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="project-metrics-row">
+                <div class="proj-metric-item">
+                  <span class="val">5+ Roles</span>
+                  <span class="lbl">Granular RBAC</span>
+                </div>
+                <div class="proj-metric-item">
+                  <span class="val">100% ACID</span>
+                  <span class="lbl">Order Splitting</span>
+                </div>
+                <div class="proj-metric-item">
+                  <span class="val">&lt;30ms</span>
+                  <span class="lbl">Auth Handshake</span>
+                </div>
+              </div>
+
+              <div class="project-tags">
+                <span class="badge badge-emerald">Java</span>
+                <span class="badge badge-cyan">Spring Boot</span>
+                <span class="badge">MySQL</span>
+                <span class="badge">JWT</span>
+                <span class="badge">OAuth2</span>
+                <span class="badge">REST APIs</span>
+              </div>
+
+              <div class="project-card-footer">
+                <a href="https://github.com/V-Premnath/PharmaEase" target="_blank" rel="noopener noreferrer"
+                  class="project-link-action">
+                  <span>View on GitHub ↗</span>
+                </a>
+                <span class="badge badge-violet">Enterprise Microservices</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: GolfNex (Google Play Live App) -->
+          <article class="project-card glass-card" data-category="client" data-tags="client python fastapi aws"
+            data-reveal>
+            <div class="project-top">
+              <span class="project-category-badge">LIVE ON GOOGLE PLAY STORE</span>
+              <h3 class="project-title">
+                <span>GolfNex — Sports & Golf Platform</span>
+              </h3>
+              <p class="project-desc">
+                Developed and delivered the core backend REST APIs for GolfNex, a live sports companion app available on
+                Google Play. Built scalable game-matching logic, user handicaps, booking reservations, and real-time
+                push events.
+              </p>
+
+              <ul class="project-highlights-list">
+                <li>Delivered high-availability FastAPI microservices serving thousands of active golfers.</li>
+                <li>Integrated automated payment gateways and SMS/Push notifications.</li>
+                <li>Deployed with Docker containerization and AWS cloud infrastructure.</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="project-metrics-row">
+                <div class="proj-metric-item">
+                  <span class="val">Play Store</span>
+                  <span class="lbl">Live Production</span>
+                </div>
+                <div class="proj-metric-item">
+                  <span class="val">99.9%</span>
+                  <span class="lbl">Uptime SLA</span>
+                </div>
+                <div class="proj-metric-item">
+                  <span class="val">FastAPI</span>
+                  <span class="lbl">Async Engine</span>
+                </div>
+              </div>
+
+              <div class="project-tags">
+                <span class="badge badge-cyan">Python</span>
+                <span class="badge badge-emerald">FastAPI</span>
+                <span class="badge">AWS (EC2, S3, RDS)</span>
+                <span class="badge">Docker</span>
+                <span class="badge">Google Play Live</span>
+              </div>
+
+              <div class="project-card-footer">
+                <a href="https://play.google.com/store/search?q=golfnex&c=apps" target="_blank"
+                  rel="noopener noreferrer" class="project-link-action">
+                  <span>Google Play App ↗</span>
+                </a>
+                <span class="badge badge-cyan">Client Application</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: abiozen.com -->
+          <article class="project-card glass-card" data-category="client" data-tags="client python django" data-reveal>
+            <div class="project-top">
+              <span class="project-category-badge">COMMERCIAL BIOTECH PLATFORM</span>
+              <h3 class="project-title">
+                <span>abiozen.com — Biotech / Pharma Platform</span>
+              </h3>
+              <p class="project-desc">
+                Contributed to the backend architecture and API delivery for abiozen.com, powering commercial catalog
+                management, multi-tier inquiry routing, and secure data access workflows for life-sciences clients.
+              </p>
+
+              <ul class="project-highlights-list">
+                <li>Engineered custom Django REST Framework endpoints for fast catalog searches and filtering.</li>
+                <li>Optimized database indexes, cutting catalog query response times by 45%.</li>
+                <li>Implemented automated unit & integration testing to ensure zero regression in production.</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="project-metrics-row">
+                <div class="proj-metric-item">
+                  <span class="val">-45%</span>
+                  <span class="lbl">Query Latency</span>
+                </div>
+                <div class="proj-metric-item">
+                  <span class="val">Live</span>
+                  <span class="lbl">abiozen.com</span>
+                </div>
+              </div>
+
+              <div class="project-tags">
+                <span class="badge badge-cyan">Python</span>
+                <span class="badge badge-violet">Django REST</span>
+                <span class="badge">PostgreSQL</span>
+                <span class="badge">CI/CD</span>
+              </div>
+
+              <div class="project-card-footer">
+                <a href="https://abiozen.com" target="_blank" rel="noopener noreferrer" class="project-link-action">
+                  <span>Visit abiozen.com ↗</span>
+                </a>
+                <span class="badge badge-emerald">Commercial Live</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Aros Compliance -->
+          <article class="project-card glass-card" data-category="client" data-tags="client python rbac" data-reveal>
+            <div class="project-top">
+              <span class="project-category-badge">ENTERPRISE COMPLIANCE SUITE</span>
+              <h3 class="project-title">
+                <span>Aros Compliance — Enterprise Governance Platform</span>
+              </h3>
+              <p class="project-desc">
+                Engineered the compliance audit tracking backend, rule evaluation engines, and secure authorization
+                systems for aroscompliance.com, ensuring enterprise regulatory data integrity and strict multi-tenant
+                isolation.
+              </p>
+
+              <ul class="project-highlights-list">
+                <li>Built audit logging pipelines tracking full lifecycle of compliance attestations.</li>
+                <li>Integrated Playwright automated end-to-end regression suites.</li>
+                <li>Designed multi-tenant data partitioning guaranteeing tenant data isolation.</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="project-metrics-row">
+                <div class="proj-metric-item">
+                  <span class="val">Multi-Tenant</span>
+                  <span class="lbl">Full Isolation</span>
+                </div>
+                <div class="proj-metric-item">
+                  <span class="val">Live</span>
+                  <span class="lbl">aroscompliance.com</span>
+                </div>
+              </div>
+
+              <div class="project-tags">
+                <span class="badge badge-cyan">Python</span>
+                <span class="badge">FastAPI</span>
+                <span class="badge">Multi-Tenant RBAC</span>
+                <span class="badge">Playwright</span>
+                <span class="badge">Docker</span>
+              </div>
+
+              <div class="project-card-footer">
+                <a href="https://www.aroscompliance.com" target="_blank" rel="noopener noreferrer"
+                  class="project-link-action">
+                  <span>Visit aroscompliance.com ↗</span>
+                </a>
+                <span class="badge badge-violet">Enterprise Live</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: Linkabl, PlayNexa & Favly -->
+          <article class="project-card glass-card" data-category="client" data-tags="client python fast-api"
+            data-reveal>
+            <div class="project-top">
+              <span class="project-category-badge">CONSUMER & SOCIAL APPS</span>
+              <h3 class="project-title">
+                <span>Linkabl, PlayNexa & Favly Suite</span>
+              </h3>
+              <p class="project-desc">
+                Delivered full-stack backend integrations, communication microservices, and dynamic feed endpoints for
+                three consumer-facing applications across sports, creator linking, and recommendations.
+              </p>
+
+              <ul class="project-highlights-list">
+                <li>Integrated 10+ external third-party APIs (Stripe payments, Twilio SMS, SendGrid, analytics).</li>
+                <li>Built reusable authentication and session management middleware.</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="project-tags">
+                <span class="badge badge-cyan">FastAPI</span>
+                <span class="badge">Django</span>
+                <span class="badge">Third-Party APIs</span>
+                <span class="badge">OAuth2</span>
+              </div>
+
+              <div class="project-card-footer">
+                <span class="font-mono" style="font-size: 11px; color: var(--text-tertiary);">3 Consumer Apps</span>
+                <span class="badge badge-cyan">Production Delivery</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6: Automated Playwright E2E Testing Suite -->
+          <article class="project-card glass-card" data-category="python" data-tags="python testing" data-reveal>
+            <div class="project-top">
+              <span class="project-category-badge">RELIABILITY & QUALITY ENGINEERING</span>
+              <h3 class="project-title">
+                <span>Automated E2E Testing & CI/CD Pipeline</span>
+              </h3>
+              <p class="project-desc">
+                Architected automated Playwright end-to-end testing frameworks and CI/CD validation workflows integrated
+                with GitHub Actions and Jenkins, cutting manual regression testing overhead by 60%.
+              </p>
+
+              <ul class="project-highlights-list">
+                <li>Automated cross-browser UI and API regression validations on every pull request.</li>
+                <li>Eliminated production deployment outages and accelerated release velocity.</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="project-metrics-row">
+                <div class="proj-metric-item">
+                  <span class="val">-60%</span>
+                  <span class="lbl">Testing Overhead</span>
+                </div>
+                <div class="proj-metric-item">
+                  <span class="val">Zero</span>
+                  <span class="lbl">Deployment Regressions</span>
+                </div>
+              </div>
+
+              <div class="project-tags">
+                <span class="badge badge-emerald">Playwright</span>
+                <span class="badge">Python</span>
+                <span class="badge">GitHub Actions</span>
+                <span class="badge">CI/CD</span>
+                <span class="badge">Jenkins</span>
+              </div>
+
+              <div class="project-card-footer">
+                <span class="font-mono" style="font-size: 11px; color: var(--text-tertiary);">Quality Framework</span>
+                <span class="badge badge-emerald">Automated QA</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         PROFESSIONAL EXPERIENCE TIMELINE
+         ======================================================================== -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-eyebrow">Career Journey</span>
+          <h2 class="section-title">Professional Experience</h2>
+          <p class="section-desc">
+            Track record of designing scalable REST APIs, engineering multi-tenant systems, and improving production
+            database performance.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item" data-reveal>
+            <div class="timeline-dot"></div>
+            <div class="experience-card glass-card">
+              <div class="experience-header">
+                <div>
+                  <h3 class="role-title">Software Engineer – Backend & Python Development</h3>
+                  <div class="company-name">Adifice Technologies</div>
+                </div>
+                <div class="experience-period">2025 — Present • Full-Time</div>
+              </div>
+              <span class="experience-location">📍 Hyderabad, India</span>
+
+              <ul class="experience-bullets">
+                <li>Contributed to the development and production delivery of <strong>6+ client applications and
+                    products</strong> across e-commerce, sports, compliance, social, and consumer platforms:
+                  <strong>GolfNex</strong>, <strong>abiozen</strong>, <strong>Aros Compliance</strong>,
+                  <strong>Linkabl</strong>, <strong>PlayNexa</strong>, and <strong>Favly</strong>.
+                </li>
+                <li>Designed and developed scalable REST APIs and backend services using <strong>Python, FastAPI, and
+                    Django</strong>, focusing on modular microservices architecture, performance, and clean
+                  maintainability.</li>
+                <li>Implemented secure authentication and authorization using <strong>OAuth2, JWT, refresh-token
+                    rotation</strong>, and <strong>multi-tenant RBAC</strong> supporting multiple user roles and access
+                  levels.</li>
+                <li>Integrated <strong>10+ third-party services and APIs</strong>, including payment gateways, SMS/Email
+                  communication, authentication providers, and analytics pipelines.</li>
+                <li>Built automated <strong>Playwright E2E test suites</strong>, reducing manual QA testing effort by
+                  approximately <strong>60%</strong>, while actively debugging and resolving production incidents across
+                  application and database layers.</li>
+                <li>Optimized SQL queries and backend data-access workflows, achieving up to <strong>50% improvement in
+                    query performance</strong> and contributing to <strong>40% faster API response times</strong>.</li>
+                <li>Collaborated seamlessly across the entire SDLC: requirements analysis, API specification, database
+                  normalization, testing, containerized deployment, and live production support.</li>
+              </ul>
+
+              <div class="shipped-clients-row">
+                <span class="shipped-clients-label">Shipped Client Applications:</span>
+                <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                  <span class="badge badge-cyan">GolfNex (Google Play)</span>
+                  <span class="badge badge-emerald">abiozen.com</span>
+                  <span class="badge badge-violet">aroscompliance.com</span>
+                  <span class="badge">Linkabl</span>
+                  <span class="badge">PlayNexa</span>
+                  <span class="badge">Favly</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         TECHNICAL SKILLS MATRIX
+         ======================================================================== -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-eyebrow">Technical Mastery</span>
+          <h2 class="section-title">Skills & Capabilities Matrix</h2>
+          <p class="section-desc">
+            Technologies, frameworks, and architectural paradigms I use daily to build robust, scalable distributed
+            systems.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Category 1: Languages & Core -->
+          <div class="skill-category-card glass-card" data-reveal>
+            <div class="category-title-group">
+              <span class="category-icon">💻</span>
+              <h3 class="category-name">Languages & Core</h3>
+            </div>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill featured">Python</span>
+              <span class="skill-pill featured">Java</span>
+              <span class="skill-pill featured">SQL</span>
+              <span class="skill-pill">JavaScript</span>
+              <span class="skill-pill">C</span>
+              <span class="skill-pill">Object-Oriented Programming (OOP)</span>
+              <span class="skill-pill">System Design</span>
+              <span class="skill-pill">Data Structures</span>
+            </div>
+          </div>
+
+          <!-- Category 2: Backend & APIs -->
+          <div class="skill-category-card glass-card" data-reveal>
+            <div class="category-title-group">
+              <span class="category-icon">⚡</span>
+              <h3 class="category-name">Backend & Microservices</h3>
+            </div>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill featured">FastAPI</span>
+              <span class="skill-pill featured">Django REST Framework</span>
+              <span class="skill-pill featured">Spring Boot</span>
+              <span class="skill-pill">RESTful APIs</span>
+              <span class="skill-pill">OAuth2 & JWT</span>
+              <span class="skill-pill">Multi-Tenant RBAC</span>
+              <span class="skill-pill">Microservices Architecture</span>
+              <span class="skill-pill">Distributed Systems</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Cloud & DevOps -->
+          <div class="skill-category-card glass-card" data-reveal>
+            <div class="category-title-group">
+              <span class="category-icon">☁️</span>
+              <h3 class="category-name">Cloud & DevOps</h3>
+            </div>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill featured">AWS (EC2, S3, Lambda, RDS, IAM)</span>
+              <span class="skill-pill featured">Docker Containerization</span>
+              <span class="skill-pill">Linux Systems</span>
+              <span class="skill-pill">CI/CD (GitHub Actions)</span>
+              <span class="skill-pill">Jenkins Pipelines</span>
+              <span class="skill-pill">Git Version Control</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Databases & Data -->
+          <div class="skill-category-card glass-card" data-reveal>
+            <div class="category-title-group">
+              <span class="category-icon">🗄️</span>
+              <h3 class="category-name">Databases & Analytics</h3>
+            </div>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill featured">MySQL</span>
+              <span class="skill-pill">SQL Server</span>
+              <span class="skill-pill">Oracle PL/SQL</span>
+              <span class="skill-pill">Query Optimization & Indexing</span>
+              <span class="skill-pill">ETL Pipelines</span>
+              <span class="skill-pill">Data Warehousing</span>
+              <span class="skill-pill">Pandas Data Analysis</span>
+              <span class="skill-pill">Metabase Analytics</span>
+            </div>
+          </div>
+
+          <!-- Category 5: Testing & Reliability -->
+          <div class="skill-category-card glass-card" data-reveal>
+            <div class="category-title-group">
+              <span class="category-icon">🧪</span>
+              <h3 class="category-name">Testing & Reliability</h3>
+            </div>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill featured">Playwright Automated E2E</span>
+              <span class="skill-pill">Unit Testing (pytest, JUnit)</span>
+              <span class="skill-pill">Integration Testing</span>
+              <span class="skill-pill">API Stress & Benchmark Testing</span>
+              <span class="skill-pill">Root Cause Debugging</span>
+            </div>
+          </div>
+
+          <!-- Category 6: Third-Party & Ecosystem -->
+          <div class="skill-category-card glass-card" data-reveal>
+            <div class="category-title-group">
+              <span class="category-icon">🔌</span>
+              <h3 class="category-name">API Ecosystem & Integrations</h3>
+            </div>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill">Payment Gateways</span>
+              <span class="skill-pill">Google OAuth</span>
+              <span class="skill-pill">SMS & Email Webhooks</span>
+              <span class="skill-pill">Analytics APIs</span>
+              <span class="skill-pill">Third-Party SaaS Integrations (10+)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         EDUCATION & CERTIFICATIONS
+         ======================================================================== -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-eyebrow">Credentials</span>
+          <h2 class="section-title">Education & Certifications</h2>
+          <p class="section-desc">Academic excellence in Computer Science and specialized certifications in Cloud &
+            System Architecture.</p>
+        </div>
+
+        <div class="education-grid">
+          <!-- Education Card -->
+          <div class="edu-card glass-card" data-reveal>
+            <span class="section-eyebrow" style="margin-bottom: var(--space-sm);">ACADEMIC DEGREE</span>
+            <h3 class="edu-title">Bachelor of Technology (B.Tech) in Computer Science & Engineering</h3>
+            <div class="edu-school">Rajiv Gandhi University of Knowledge Technologies (RGUKT), RK Valley</div>
+            <div class="edu-meta">2022 — 2026 • Full-Time</div>
+
+            <div style="margin-top: var(--space-md);">
+              <div class="gpa-badge">
+                <span>🏆 CGPA: 8.84 / 10.0</span>
+              </div>
+            </div>
+            <p style="font-size: var(--text-xs); color: var(--text-secondary); margin-top: var(--space-sm);">
+              Coursework: Distributed Systems, Operating Systems, Database Management Systems, System Design,
+              Object-Oriented Analysis & Design, Compiler Design, Cloud Computing.
+            </p>
+          </div>
+
+          <!-- Certifications Card -->
+          <div class="cert-card glass-card" data-reveal>
+            <span class="section-eyebrow" style="margin-bottom: var(--space-sm);">PROFESSIONAL CERTIFICATIONS</span>
+            <ul class="cert-list">
+              <li class="cert-item">
+                <div class="cert-name">
+                  <span style="color: var(--accent-cyan);">☁️ AWS Fundamentals Certification</span>
+                </div>
+                <div class="cert-desc">
+                  Completed EC2, S3, Lambda, RDS, IAM modules with hands-on enterprise cloud architecture and production
+                  deployment.
+                </div>
+              </li>
+              <li class="cert-item">
+                <div class="cert-name">
+                  <span style="color: var(--accent-emerald);">☕ NPTEL Object-Oriented System Design</span>
+                  <span class="badge badge-emerald">Elite + Silver</span>
+                </div>
+                <div class="cert-desc">
+                  Applied SOLID principles, GoF design patterns, and UML diagrams for enterprise system architecture
+                  using Java.
+                </div>
+              </li>
+              <li class="cert-item">
+                <div class="cert-name">
+                  <span style="color: var(--accent-violet);">🧠 NPTEL Deep Learning Certification</span>
+                  <span class="badge badge-violet">Elite</span>
+                </div>
+                <div class="cert-desc">
+                  Mastered CNNs, RNNs, backpropagation algorithms, optimization techniques, and neural network model
+                  design.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         CONTACT & CONVERSION HUB
+         ======================================================================== -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="contact-card glass-card" data-reveal>
+          <span class="section-eyebrow" style="margin-bottom: var(--space-xs);">LET'S CONNECT</span>
+          <h2 class="contact-title">Have a challenging backend role or system to build?</h2>
+          <p class="contact-desc">
+            I'm currently exploring full-time Backend and Full-Stack Engineering roles where I can contribute to
+            high-scale architectures, cloud systems, and performance optimizations.
+          </p>
+
+          <div class="contact-button-row">
+            <!-- Copy Email Button -->
+            <button class="btn btn-primary copy-email-trigger" aria-label="Copy Email Address">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <span>vpremnath1509@gmail.com</span>
+            </button>
+
+            <!-- Call / Phone -->
+            <a href="tel:+917032809639" class="btn btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <span>+91 7032809639</span>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com/in/premnath-vasudevaiah" target="_blank" rel="noopener noreferrer"
+              class="btn btn-outline-cyan">
+              <span>LinkedIn Profile ↗</span>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/V-Premnath" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <span>GitHub ↗</span>
+            </a>
+          </div>
+
+          <div class="social-links-bar">
+            <a href="https://github.com/V-Premnath" target="_blank" rel="noopener noreferrer" class="social-link-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+              <span>github.com/V-Premnath</span>
+            </a>
+            <a href="https://linkedin.com/in/premnath-vasudevaiah" target="_blank" rel="noopener noreferrer"
+              class="social-link-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+              <span>linkedin.com/in/premnath-vasudevaiah</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="toast-notification" class="toast-notice" role="status" aria-live="polite">
+    ✓ Copied: vpremnath1509@gmail.com
+  </div>
+
+  <!-- JavaScript -->
+  <script src="main.js"></script>
+</body>
+
+</html>
